@@ -1,7 +1,19 @@
 package day3;
 
+import java.util.Scanner;
+
 public class Task3 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double dividend, divider;
+        for (int i = 0; i < 5; i++) {
+            dividend = scanner.nextDouble();
+            if ((divider = scanner.nextDouble()) == 0) {
+                System.out.println("Деление на 0");
+                continue;
+            }
+            System.out.println(dividend / divider);
+        }
 
     }
 }
