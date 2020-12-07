@@ -4,25 +4,25 @@ import java.util.Random;
 
 public class Task4 {
     public static void main(String[] args) {
-        int[] results = new int[10];
-        int[] sum = new int[results.length / 3];
-        int b = 0, c = 0, finalResult = 0;
+        final int CONST = 50;
+        int[] results = new int[100000];
+        int sum = 0, sum2 = 0, index = 0, count = 0;
         Random random = new Random();
         for (int i = 0; i < results.length; i++) {
-            results[i] = random.nextInt(10000);
+            results[i] = random.nextInt(10);
         }
-        for (int i = 0; i < sum.length; i++) {
-            sum[i] = results[b++] + results[b++] + results[b++];
-        }
-
-        for (int a = 1; a < sum.length; a++) {
-            if (sum[c] >= sum[a]) {
-                finalResult = c;
-            } else {
-                finalResult = a;
-                c = a;
+        while (count < (results.length % CONST == 0 ? results.length - CONST : results.length - CONST + 1)) {
+            for (int y = 0; y < CONST; y++) {
+                sum += results[count++];
             }
+            if (sum > sum2) {
+                index = count;
+                sum2 = sum;
+            }
+            count -= CONST - 1;
+            sum = 0;
         }
-        System.out.println(finalResult * 3);
+        System.out.println(sum2);
+        System.out.println(index - CONST);
     }
 }
