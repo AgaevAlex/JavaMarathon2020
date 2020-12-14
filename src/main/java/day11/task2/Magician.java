@@ -1,13 +1,15 @@
 package day11.task2;
 
-public class Magician extends Hero {
+public class Magician extends Hero implements MagicAttack {
+    private int magicAtt;
+
     public Magician() {
-        super.setHealth(100);
         super.setPhysDef(0);
         super.setMagicDef(0.8);
         super.setPhysAtt(5);
-        super.setMagicAtt(20);
+        magicAtt = 20;
     }
+
 
     @Override
     public String toString() {
@@ -16,4 +18,8 @@ public class Magician extends Hero {
                 '}';
     }
 
+    @Override
+    public void magicalAttack(Hero hero) {
+        hero.setHealth(hero.getHealth() - (magicAtt - magicAtt * hero.getMagicDef()));
+    }
 }

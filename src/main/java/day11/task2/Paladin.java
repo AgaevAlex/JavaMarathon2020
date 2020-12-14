@@ -1,13 +1,14 @@
 package day11.task2;
 
 public class Paladin extends Hero implements Healer {
-        public Paladin() {
-        super.setHealth(100);
+    private int healHimself, healTeammate;
+
+    public Paladin() {
         super.setPhysDef(0.5);
         super.setMagicDef(0.2);
         super.setPhysAtt(15);
-        super.setHealHimself(25);
-        super.setHealTeammate(10);
+        healHimself = 25;
+        healTeammate = 10;
     }
 
     @Override
@@ -15,5 +16,15 @@ public class Paladin extends Hero implements Healer {
         return "Paladin{" +
                 "health=" + super.getHealth() +
                 '}';
+    }
+
+    @Override
+    public void healHimself() {
+        super.setHealth(getHealth() + healHimself);
+    }
+
+    @Override
+    public void healTeammate(Hero hero) {
+        hero.setHealth(getHealth() + healTeammate);
     }
 }
