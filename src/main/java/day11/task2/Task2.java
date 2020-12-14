@@ -13,7 +13,7 @@ public class Task2 {
         System.out.println(magician.toString());
         shaman.healTeammate(magician);
         System.out.println(magician.toString());
-        magician.mahicalAttack(paladin);
+        magician.magicalAttack(paladin);
         System.out.println(paladin.toString());
         shaman.physicalAttack(warrior);
         System.out.println(warrior.toString());
