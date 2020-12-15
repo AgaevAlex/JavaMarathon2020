@@ -23,12 +23,13 @@ public class Task3 {
         musicBands.add(new MusicBand("Three Days Grace", 1992));
         System.out.println(musicBands.toString());
         //кастом рандомного списка
-        for (int i = 0; i < 10; i++) {
-            int rand = random.nextInt(10);
-            MusicBand musicBand2 = musicBands.get(i);
-            musicBands.set(i, musicBands.get(rand));
-            musicBands.set(rand, musicBand2);
-        }
+//        for (int i = 0; i < 10; i++) {
+//            int rand = random.nextInt(10);
+//            MusicBand musicBand2 = musicBands.get(i);
+//            musicBands.set(i, musicBands.get(rand));
+//            musicBands.set(rand, musicBand2);
+//        }
+        Collections.shuffle(musicBands);
         System.out.println(musicBands.toString());
         System.out.println(groupsAfter2000(musicBands).toString());
     }

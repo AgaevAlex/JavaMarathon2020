@@ -23,7 +23,7 @@ class Day12Task4MusicBandTest {
         members2.add("Paul McCartney");
         MusicBand band2 = new MusicBand("The Beatles", 1960, members2);
 
-        band2.transferMembers(band1);
+        MusicBand.transferMembers(band1, band2);
 
         assertEquals(0, band1.getMembers().size(), "Участники: гр. А = 3, гр. В = 2. После объединения в группе А");
         assertEquals(5, band2.getMembers().size(), "Участники: гр. А = 3, гр. В = 2. После объединения в группе В");

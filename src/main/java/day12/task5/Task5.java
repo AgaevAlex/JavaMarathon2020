@@ -18,7 +18,7 @@ public class Task5 {
         MusicBand musicBandB = new MusicBand("teamB", 2020, membersB);
         musicBandA.printMembers();
         musicBandB.printMembers();
-        musicBandA.transferMembers(musicBandB);
+        MusicBand.transferMembers(musicBandA, musicBandB);
         musicBandA.printMembers();
         musicBandB.printMembers();
     }

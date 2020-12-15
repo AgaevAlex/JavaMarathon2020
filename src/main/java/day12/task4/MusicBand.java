@@ -32,11 +32,9 @@ public class MusicBand {
     }
 
     //немного не понял для чего делать метод статичным и передавать в него два объекта?
-    public void transferMembers(MusicBand musicBandB) {
-        for (String member : musicBandB.getMembers()) {
-            this.members.add(member);
-        }
-        musicBandB.members.clear();
+    public static void transferMembers(MusicBand musicBandA, MusicBand musicBandB) {
+        musicBandB.members.addAll(musicBandA.members);
+        musicBandA.members.clear();
     }
 
     public void printMembers() {

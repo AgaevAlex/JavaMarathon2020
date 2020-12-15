@@ -26,7 +26,7 @@ class Day12Task5MusicBandTest {
         members2.add(new MusicArtist("Ringo Starr", 61));
         MusicBand band2 = new MusicBand("The Beatles", 1960, members2);
 
-        band2.transferMembers(band1);
+        MusicBand.transferMembers(band1, band2);
         assertEquals(0, band1.getMembers().size(), "Участники: гр. А = 4, гр. В = 3. После объединения в группе А");
         assertEquals(7, band2.getMembers().size(), "Участники: гр. А = 4, гр. В = 3. После объединения в группе В");
 
