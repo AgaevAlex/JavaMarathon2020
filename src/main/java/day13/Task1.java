@@ -23,8 +23,9 @@ public class Task1 {
 
         MessageDatabase.addNewMessage(user3, user1, "Poka");
 
-        MessageDatabase.showDialog(user1,user3);
+        MessageDatabase.showDialog(user1, user3);
 
-
+        Message message = new Message(user1, user2, "Test Data");
+        System.out.println(message.toString());
     }
 }

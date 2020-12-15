@@ -16,12 +16,10 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{" +
-                "FROM: " + sender + "\n" +
+        return "FROM: " + sender + "\n" +
                 "TO: " + receiver + "\n" +
                 "ON: " + date + "\n" +
-                text +
-                '}';
+                text;
     }
 
     public User getSender() {
