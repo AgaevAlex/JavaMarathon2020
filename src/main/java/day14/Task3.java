@@ -26,11 +26,12 @@ public class Task3 {
                 }
                 results.add(new Person(result[0], age));
             }
-
+            scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         } catch (IOException e) {
             System.out.println("Некорректный входной файл");
+
         }
 
         return results;
