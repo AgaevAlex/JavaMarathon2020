@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        File file = new File("tes1 t");
+        File file = new File("test1");
         printSumDigits(file);
     }
 
@@ -18,7 +18,7 @@ public class Task1 {
         try {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextInt()) {
-                scanner.nextLine();
+                result += scanner.nextInt();
                 count++;
             }
             if (count != 10) {
@@ -29,6 +29,7 @@ public class Task1 {
                 }
 
             }
+            System.out.println(result);
             scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
