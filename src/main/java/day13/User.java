@@ -6,7 +6,6 @@ import java.util.List;
 public class User {
     private String username;
     private List<User> subscriptions;
-    private boolean isFriend = false;
 
     public User(String username) {
         this.username = username;
@@ -31,10 +30,7 @@ public class User {
     }
 
     public boolean isFriend(User user) {
-        if (subscriptions.contains(user) && user.getSubscriptions().contains(this)) {
-            isFriend = true;
-        }
-        return isFriend;
+        return subscriptions.contains(user) && user.getSubscriptions().contains(this);
     }
 
     public void sendMessage(User user, String text) {
