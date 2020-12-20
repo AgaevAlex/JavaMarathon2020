@@ -13,7 +13,8 @@ public class Task1 {
     public static void printResult(File file) {
         try {
             Scanner scanner = new Scanner(file);
-            double result = 0, finalResult;
+            int result = 0;
+            double finalResult;
 
             int count = 0;
             while (scanner.hasNextInt()) {
